@@ -1,6 +1,7 @@
 package com.example.newsappretrofit
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +31,9 @@ class NewsAdapter(val context: Context, val articles: List<Article>) :
         holder.newsDescription.text = article.description
         Glide.with(context).load(article.urlToImage).into(holder.newsImage)
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, article.title, Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("URL",article.url)
+            context.startActivity(intent)
         }
     }
 
