@@ -50,4 +50,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     implementation 'com.littlemango:stacklayoutmanager:1.0.5' // stackLayoutManager
+    implementation 'com.google.android.gms:play-services-ads:20.2.0' //Admob
 }
